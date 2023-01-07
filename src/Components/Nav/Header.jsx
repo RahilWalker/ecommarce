@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Header() {
+  const [sideNav, setSideNav] = useState(false);
+  const handleSideNav = () => {
+    setSideNav(!sideNav);
+    console.log("side", sideNav);
+  };
+
   return (
     <>
       <header aria-label="Site Header" className="border-b border-gray-100">
         <div className="mx-auto flex h-16 max-w-screen-2xl items-center justify-between sm:px-6 lg:px-8">
           <div className="flex items-center">
-            <button type="button" className="p-2 sm:mr-4 lg:hidden">
+            <button
+              type="button"
+              className="p-2 sm:mr-4 lg:hidden"
+              onClick={handleSideNav}
+            >
               <svg
                 className="h-6 w-6"
                 xmlns="http://www.w3.org/2000/svg"
@@ -16,9 +26,9 @@ export default function Header() {
                 stroke="currentColor"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M4 6h16M4 12h16M4 18h16"
                 />
               </svg>
@@ -79,9 +89,9 @@ export default function Header() {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
                         d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
                       />
                     </svg>
@@ -103,9 +113,9 @@ export default function Header() {
                       stroke="currentColor"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
                         d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
                       />
                     </svg>
@@ -127,9 +137,9 @@ export default function Header() {
                       stroke="currentColor"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
                         d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                       />
                     </svg>
@@ -142,6 +152,43 @@ export default function Header() {
           </div>
         </div>
       </header>
+      {sideNav === true ? (
+        <nav
+          aria-label="Site Nav"
+          className="lg:hidden w-40  lg:text-gray-500 bg-green-100 px-3 pt-2 h-[91vh] transition-transform"
+          onClick={handleSideNav}
+        >
+          <Link
+            to="/about"
+            className="block  border-b-4 border-transparent mb-3 hover:border-current hover:text-red-700"
+          >
+            About
+          </Link>
+
+          <Link
+            to="/news"
+            className="block  border-b-4 border-transparent mb-3 hover:border-current hover:text-red-700"
+          >
+            News
+          </Link>
+
+          <Link
+            to="/products"
+            className="block  border-b-4 border-transparent mb-3 hover:border-current hover:text-red-700"
+          >
+            Products
+          </Link>
+
+          <Link
+            to="/contact"
+            className="block  border-b-4 border-transparent mb-3 hover:border-current hover:text-red-700"
+          >
+            Contact
+          </Link>
+        </nav>
+      ) : (
+        ""
+      )}
     </>
   );
 }
