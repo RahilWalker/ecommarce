@@ -152,43 +152,40 @@ export default function Header() {
           </div>
         </div>
       </header>
-      {sideNav === true ? (
-        <nav
-          aria-label="Site Nav"
-          className="lg:hidden w-40  lg:text-gray-500 bg-green-100 px-3 pt-2 h-[91vh] transition-transform"
-          onClick={handleSideNav}
+      <div
+        className={`lg:hidden ${
+          sideNav ? "w-40 h-[91vh] p-2" : "w-0 h-0 invisible delay-0"
+        }  lg:text-gray-500 bg-[#e5e7eb] flex flex-col transition-all delay-100 rounded-t-md`}
+        onClick={handleSideNav}
+      >
+        <Link
+          to="/about"
+          className="  border-b-4 border-transparent mb-3 hover:border-current hover:text-red-700"
         >
-          <Link
-            to="/about"
-            className="block  border-b-4 border-transparent mb-3 hover:border-current hover:text-red-700"
-          >
-            About
-          </Link>
+          About
+        </Link>
 
-          <Link
-            to="/news"
-            className="block  border-b-4 border-transparent mb-3 hover:border-current hover:text-red-700"
-          >
-            News
-          </Link>
+        <Link
+          to="/news"
+          className="  border-b-4 border-transparent mb-3 hover:border-current hover:text-red-700"
+        >
+          News
+        </Link>
 
-          <Link
-            to="/products"
-            className="block  border-b-4 border-transparent mb-3 hover:border-current hover:text-red-700"
-          >
-            Products
-          </Link>
+        <Link
+          to="/products"
+          className="  border-b-4 border-transparent mb-3 hover:border-current hover:text-red-700"
+        >
+          Products
+        </Link>
 
-          <Link
-            to="/contact"
-            className="block  border-b-4 border-transparent mb-3 hover:border-current hover:text-red-700"
-          >
-            Contact
-          </Link>
-        </nav>
-      ) : (
-        ""
-      )}
+        <Link
+          to="/contact"
+          className="  border-b-4 border-transparent mb-3 hover:border-current hover:text-red-700"
+        >
+          Contact
+        </Link>
+      </div>
     </>
   );
 }
