@@ -154,10 +154,19 @@ export default function Header() {
       </header>
       <div
         className={`lg:hidden ${
-          sideNav ? "w-40 h-[91vh] p-2" : "w-0 h-0 invisible delay-0"
-        }  lg:text-gray-500 bg-[#e5e7eb] flex flex-col transition-all delay-100 rounded-t-md`}
+          sideNav ? "w-full h-full p-2" : "w-0 h-0 invisible delay-0"
+        }  lg:text-gray-500 bg-white flex flex-col transition-all delay-100 rounded-t-md absolute -mt-[18%]`}
         onClick={handleSideNav}
       >
+        <div className="flex justify-end cursor-pointer ">
+          <span className=" px-3 py-1 rounded-md hover:border-2  hover:border-red-700">
+            hi
+          </span>
+        </div>
+        <div className=" border-b-4 border-red-200 mb-5">
+          <h1 className="pt-5 font-extrabold">Ecommarce</h1>
+        </div>
+
         <Link
           to="/about"
           className="  border-b-4 border-transparent mb-3 hover:border-current hover:text-red-700"
