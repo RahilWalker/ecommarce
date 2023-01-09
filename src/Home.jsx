@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Carousel />
-      <div className="mx-20 py-5">
+      <div className="lg:mx-20 mx-2 py-5">
         <HotDeals />
       </div>
     </>
