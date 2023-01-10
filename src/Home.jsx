@@ -5,8 +5,8 @@ import Carousel from "./Components/Carousel/Carousel";
 export default function Home() {
   return (
     <>
-      <Carousel />
-      <div className="lg:mx-20 mx-2 py-5">
+      {/* <Carousel /> */}
+      <div className="lg:mx-20 mx-2 py-5 w-[100wv] ">
         <HotDeals />
       </div>
     </>
