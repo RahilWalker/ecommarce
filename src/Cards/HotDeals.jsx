@@ -3,24 +3,6 @@ import { leftIcon, rightIcon } from "../Icons/MaterialIcons";
 import { deals } from "../Storage/HotItems";
 
 export default function HotDeals() {
-  const [counter, setCounter] = useState(0);
-
-  // console.log("ddd", dealsData);
-
-  // const handleScroll = (id) => {
-  //   var copyData = [...dealsData];
-  //   if (copyData[id]["slide"]) {
-  //     copyData[id]["slide"] = false;
-  //   } else {
-  //     copyData[id]["slide"] = true;
-  //   }
-  //   setDealsData(copyData);
-  // };
-
-  const handleScroll = () => {
-    setCounter(counter + 1);
-  };
-  console.log(counter);
   return (
     <>
       <div className="flex justify-between py-5">
@@ -30,23 +12,18 @@ export default function HotDeals() {
             <button className="  px-3 border roundem-sm py-1 opacity-40">
               {leftIcon}
             </button>
-            <button
-              onClick={() => handleScroll()}
-              className="  px-3 border roundem-sm ml-3 opacity-40"
-            >
+            <button className="  px-3 border roundem-sm ml-3 opacity-40">
               {rightIcon}
             </button>
           </div>
         </div>
       </div>
-      <div className="overflow-x-hidden  grid grid-flow-col">
+      <div className="overflow-x-auto grid grid-flow-col">
         {deals?.map((item, id) => (
           <>
             <div
               key={id}
-              className={`flex  ${
-                counter === id ? `-translate-x-[${item.slide}]` : ""
-              } transition-all flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg w-[36rem] mr-5 ml-5`}
+              className="flex  transition-all flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg w-[36rem] mr-5 ml-5"
             >
               <img
                 className=" w-full h-[50vh] md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg"
