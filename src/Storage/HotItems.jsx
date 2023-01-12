@@ -1,4 +1,4 @@
-import { heartIcon, starIcon } from "../Icons/MaterialIcons";
+import { addCart, heartIcon, starIcon } from "../Icons/MaterialIcons";
 
 export const deals = [
   {
@@ -6,7 +6,7 @@ export const deals = [
     Product: "American Girls Jeans",
     price: "$25.00",
     droped: " $55.00",
-    slide: "100%",
+    mobile: addCart,
     rate: starIcon,
     about:
       "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
@@ -20,7 +20,7 @@ export const deals = [
     price: "$25.00",
     droped: " $55.00",
     rate: starIcon,
-    slide: "200%",
+    mobile: addCart,
     about:
       "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
     add: "ADD TO CART",
@@ -31,7 +31,7 @@ export const deals = [
     Product: "American Girls Jeans",
     price: "$25.00",
     droped: " $55.00",
-    slide: "300%",
+    mobile: addCart,
     rate: starIcon,
     about:
       "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
@@ -45,7 +45,7 @@ export const deals = [
     price: "$25.00",
     droped: " $55.00",
     rate: starIcon,
-    slide: "400%",
+    mobile: addCart,
     about:
       "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
     add: "ADD TO CART",
@@ -57,7 +57,7 @@ export const deals = [
     price: "$25.00",
     droped: " $55.00",
     rate: starIcon,
-    slide: "100%",
+    mobile: addCart,
     about:
       "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
     add: "ADD TO CART",
@@ -68,7 +68,7 @@ export const deals = [
     Product: "American Girls Jeans",
     price: "$25.00",
     droped: " $55.00",
-    slide: "100%",
+    mobile: addCart,
     rate: starIcon,
     about:
       "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
@@ -82,7 +82,7 @@ export const deals = [
     price: "$25.00",
     droped: " $55.00",
     rate: starIcon,
-    slide: "200%",
+    mobile: addCart,
     about:
       "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
     add: "ADD TO CART",
@@ -93,7 +93,7 @@ export const deals = [
     Product: "American Girls Jeans",
     price: "$25.00",
     droped: " $55.00",
-    slide: "300%",
+    mobile: addCart,
     rate: starIcon,
     about:
       "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
@@ -107,7 +107,7 @@ export const deals = [
     price: "$25.00",
     droped: " $55.00",
     rate: starIcon,
-    slide: "400%",
+    mobile: addCart,
     about:
       "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
     add: "ADD TO CART",
@@ -119,7 +119,7 @@ export const deals = [
     price: "$25.00",
     droped: " $55.00",
     rate: starIcon,
-    slide: "100%",
+    mobile: addCart,
     about:
       "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
     add: "ADD TO CART",
