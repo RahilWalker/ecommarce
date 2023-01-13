@@ -5,7 +5,7 @@ export default function Carousel() {
     <>
       <div
         id="carouselExampleControls"
-        className="carousel slide relative"
+        className="carousel slide relative mt-10"
         data-bs-ride="carousel"
       >
         <div className="carousel-inner relative w-full overflow-hidden lg:h-[400px]">
