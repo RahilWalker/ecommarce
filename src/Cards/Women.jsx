@@ -5,36 +5,44 @@ import { deals } from "../Storage/HotItems";
 export default function Women() {
   const slideLeft = () => {
     var slider = document.getElementById("devil");
-    slider.scrollLeft = slider.scrollLeft - 220;
+    slider.scrollLeft = slider.scrollLeft - 280;
   };
 
   const slideRight = () => {
     var slider = document.getElementById("devil");
-    slider.scrollLeft = slider.scrollLeft + 220;
+    slider.scrollLeft = slider.scrollLeft + 280;
   };
 
   return (
     <>
-      <div className="flex justify-between py-10 mt-10">
-        <div className="text-xl font-extrabold mt-1">Women</div>
-        <div className="text-xl font-extrabold">
-          <div className="flex">
-            <button className="  px-3 border roundem-sm py-1 opacity-40">
+      <div className="flex justify-between mb-5 lg:mt-20">
+        <div className="text-xl font-extrabold mt-2">Women</div>
+        <div className="">
+          <div className="lg:flex  hidden  ">
+            <p className="px-1 text-red-400 hover:text-red-700 cursor-pointer text-md">
               Best Sellers
-            </button>
-            <button className="  px-3 border roundem-sm ml-3 opacity-40">
+            </p>{" "}
+            <span className="opacity-30">|</span>
+            <p className="px-1 text-red-400 hover:text-red-700 cursor-pointer text-md">
               Best Sellers
-            </button>
+            </p>
+            <span className="opacity-30">|</span>{" "}
+            <p className="px-1 text-red-400 hover:text-red-700 cursor-pointer text-md">
+              Best Sellers
+            </p>{" "}
+            <span className="opacity-30">|</span>
+            <p className="px-1 text-red-400 hover:text-red-700 cursor-pointer text-md">
+              Best Sellers
+            </p>
           </div>
         </div>
       </div>
-      <div className="relative flex items-center">
+      <div className="relative items-center hidden lg:flex">
         <div
           className="opacity-50 cursor-pointer hover:opacity-100"
           onClick={slideLeft}
-          size={40}
         >
-          Left{" "}
+          {leftIcon}
         </div>
         <div
           id="devil"
@@ -43,28 +51,40 @@ export default function Women() {
           {deals.map((item, id) => (
             <div
               key={id}
-              className=" inline-block whitespace-normal p-2 cursor-pointer hover:scale-105 ease-in-out duration-300 "
+              className=" inline-block whitespace-normal p-2 cursor-pointer  hover:scale-105 ease-in-out duration-300 "
             >
-              <div className="rounded-lg bg-white shadow-lg text-center">
-                <div>
-                  <img
-                    className=" w-full lg:h-88  object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg"
-                    src="https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.jpg"
-                    alt=""
-                  />
-                  <div>Heart start</div>
-                  <div>procer</div>
+              <div className="rounded-lg bg-white shadow-lg text-center relative">
+                <img
+                  className=" w-full lg:h-80  object-cover md:w-64 opacity-80 hover:opacity-100 "
+                  src="https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.jpg"
+                  alt=""
+                />
+                <div className="flex  -mt-16 left-8 absolute">
+                  <button className="text-black bg-red-100 rounded-md py-1 px-3 mr-3 hidden lg:block">
+                    <span>{item.add}</span>
+                  </button>
+                  <button className="bg-red-100 py-1 px-3 rounded-lg border roundem-sm ">
+                    {item.wishlist}
+                  </button>
+                </div>
+                <div className="py-5">
+                  <div className="text-lg font-medium">{item.Product} </div>
+                  <div className="flex  justify-center">
+                    <span className="text-red-600 ">{item.price} </span>{" "}
+                    <span className="opacity-30 pl-3">
+                      <s>{item.droped} </s>
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
           ))}
         </div>
         <div
-          className="opacity-50 cursor-pointer hover:opacity-100"
+          className="opacity-50 cursor-pointer hover:opacity-100 "
           onClick={slideRight}
-          size={40}
         >
-          RIght{" "}
+          {rightIcon}
         </div>
       </div>
     </>
