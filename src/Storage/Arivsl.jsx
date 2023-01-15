@@ -18,3 +18,30 @@ export const newData = [
     link: "",
   },
 ];
+
+export const showCase = [
+  {
+    data: "men",
+    image:
+      "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Vertical/14a.webp",
+    link: "",
+  },
+  {
+    data: "accessories",
+    image:
+      "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Vertical/12a.webp",
+    link: "",
+  },
+  {
+    data: "women",
+    image:
+      "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Vertical/13a.webp",
+    link: "",
+  },
+  {
+    data: "women",
+    image:
+      "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Vertical/15a.webp",
+    link: "",
+  },
+];

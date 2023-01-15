@@ -29,7 +29,8 @@ export const deals = [
     wishlist: heartIcon,
   },
   {
-    image: "https://m.media-amazon.com/images/I/71GLMJ7TQiL._AC_UY218_.jpg",
+    image:
+      "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Vertical/14a.webp",
     Product: "American Girls Jeans",
     category: "male",
     price: "$25.00",
