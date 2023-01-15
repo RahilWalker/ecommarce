@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { bagIcon, seachIcon, userIcon } from "../../Icons/MaterialIcons";
 
 export default function Header() {
   const [sideNav, setSideNav] = useState(false);
@@ -42,7 +43,9 @@ export default function Header() {
               <span className="inline-block h-10 w-32 rounded-lg bg-gray-200"></span>
             </Link>
           </div>
-
+          <div className="pl-10 w-full">
+            <input type="text" name="" id="" />
+          </div>
           <div className="flex flex-1 items-center justify-end ">
             <nav
               aria-label="Site Nav"
@@ -76,7 +79,6 @@ export default function Header() {
                 Contact
               </Link>
             </nav>
-
             <div className="ml-8 flex items-center">
               <div className="flex items-center divide-x divide-gray-100 border-x border-gray-100">
                 <span>
@@ -84,20 +86,7 @@ export default function Header() {
                     to="/cart"
                     className="block border-b-4 border-transparent p-6 hover:border-red-700"
                   >
-                    <svg
-                      className="h-4 w-4"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
-                      />
-                    </svg>
+                    {bagIcon}
 
                     <span className="sr-only">Cart</span>
                   </Link>
@@ -108,20 +97,7 @@ export default function Header() {
                     to="/account"
                     className="block border-b-4 border-transparent p-6 hover:border-red-700"
                   >
-                    <svg
-                      className="h-4 w-4"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                      />
-                    </svg>
+                    {userIcon}
 
                     <span className="sr-only"> Account </span>
                   </Link>
@@ -132,20 +108,7 @@ export default function Header() {
                     to="/search"
                     className="block border-b-4 border-transparent p-6 hover:border-red-700"
                   >
-                    <svg
-                      className="h-4 w-4"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                      />
-                    </svg>
+                    {seachIcon}
 
                     <span className="sr-only"> Search </span>
                   </Link>
@@ -158,7 +121,7 @@ export default function Header() {
       <div
         className={`lg:hidden ${
           sideNav ? "w-full h-full p-2" : "w-0 h-0 invisible delay-0"
-        }  lg:text-gray-500 bg-white flex flex-col transition-all delay-100 rounded-t-md absolute -mt-[18%]`}
+        }  lg:text-gray-500 bg-white flex flex-col transition-all z-50 delay-100 rounded-t-md absolute -mt-[18%]`}
         onClick={handleSideNav}
       >
         <div className="flex justify-end cursor-pointer ">
@@ -166,7 +129,7 @@ export default function Header() {
             hi
           </span>
         </div>
-        <div className=" border-b-4 border-red-200 mb-5">
+        <div className=" border-b-4 border-red-200 mb-5 mt-5">
           <h1 className="pt-5 font-extrabold">Ecommarce</h1>
         </div>
 

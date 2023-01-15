@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HotDeals from "./Cards/HotDeals";
 import Header from "./Components/Nav/Header";
 import Home from "./Home";
+import SingleProduct from "./Page/SingleProduct";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<HotDeals />} />
+          <Route path="/single/:id" element={<SingleProduct />} />
         </Routes>
       </BrowserRouter>
     </>

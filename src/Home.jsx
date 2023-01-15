@@ -1,5 +1,6 @@
 import React from "react";
 import HotDeals from "./Cards/HotDeals";
+import Male from "./Cards/Male";
 import NewArrival from "./Cards/NewArrival";
 import Women from "./Cards/Women";
 import Carousel from "./Components/Carousel/Carousel";
@@ -12,6 +13,7 @@ export default function Home() {
         <HotDeals />
         <NewArrival />
         <Women />
+        <Male />
       </div>
     </>
   );

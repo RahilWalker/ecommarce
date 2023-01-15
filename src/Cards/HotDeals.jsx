@@ -15,7 +15,7 @@ export default function HotDeals() {
 
   return (
     <>
-      <div className="flex justify-between py-5 mt-10">
+      <div className="flex justify-between py-5">
         <div className="text-xl font-extrabold">Hot Deals</div>
         <div className="text-xl font-extrabold">
           <div className="flex">

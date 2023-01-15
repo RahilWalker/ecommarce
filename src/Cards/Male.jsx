@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import { addCart, leftIcon, rightIcon } from "../Icons/MaterialIcons";
 import { deals } from "../Storage/HotItems";
 
-export default function Women() {
+export default function Male() {
   const [filterCategory, setFilterCategory] = useState([]);
 
   const filterItems = () => {
     const filteredProducts = deals.filter(
-      (product) => product.category === "female"
+      (product) => product.category === "male"
     );
     console.log("new", filteredProducts);
     setFilterCategory(filteredProducts);
@@ -19,19 +19,19 @@ export default function Women() {
   }, []);
 
   const slideLeft = () => {
-    var slider = document.getElementById("devil");
+    var slider = document.getElementById("male");
     slider.scrollLeft = slider.scrollLeft - 280;
   };
 
   const slideRight = () => {
-    var slider = document.getElementById("devil");
+    var slider = document.getElementById("male");
     slider.scrollLeft = slider.scrollLeft + 280;
   };
 
   return (
     <>
       <div className="flex justify-between mb-5 lg:mt-10">
-        <div className="text-xl font-extrabold mt-2">Women</div>
+        <div className="text-xl font-extrabold mt-2">MEN</div>
         <div className="">
           <div className="lg:flex  hidden  ">
             <p className="px-1 text-red-400 hover:text-red-700 cursor-pointer text-md">
@@ -60,7 +60,7 @@ export default function Women() {
           {leftIcon}
         </div>
         <div
-          id="devil"
+          id="male"
           className="w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide"
         >
           {/* {console.log("dddd", deals)} */}
