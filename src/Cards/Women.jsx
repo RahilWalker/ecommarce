@@ -10,10 +10,10 @@ export default function Women() {
     const filteredProducts = deals.filter(
       (product) => product.category === "female"
     );
-    console.log("new", filteredProducts);
+    // console.log("new", filteredProducts);
     setFilterCategory(filteredProducts);
   };
-  console.log(filterCategory);
+  // console.log(filterCategory);
   useEffect(() => {
     filterItems();
   }, []);

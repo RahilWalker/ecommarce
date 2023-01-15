@@ -40,12 +40,10 @@ export default function Header() {
 
             <Link to="#" className="flex">
               <span className="sr-only">Logo</span>
-              <span className="inline-block h-10 w-32 rounded-lg bg-gray-200"></span>
+              <span className="inline-block font-extrabold">eCart Store</span>
             </Link>
           </div>
-          <div className="pl-10 w-full">
-            <input type="text" name="" id="" />
-          </div>
+
           <div className="flex flex-1 items-center justify-end ">
             <nav
               aria-label="Site Nav"
@@ -121,17 +119,17 @@ export default function Header() {
       <div
         className={`lg:hidden ${
           sideNav ? "w-full h-full p-2" : "w-0 h-0 invisible delay-0"
-        }  lg:text-gray-500 bg-white flex flex-col transition-all z-50 delay-100 rounded-t-md absolute -mt-[18%]`}
+        }  lg:text-gray-500 bg-white flex flex-col transition-all z-50 delay-100 rounded-t-md absolute`}
         onClick={handleSideNav}
       >
         <div className="flex justify-end cursor-pointer ">
-          <span className=" px-3 py-1 rounded-md hover:border-2  hover:border-red-700">
+          {/* <span className=" px-3 py-1 rounded-md hover:border-2  hover:border-red-700">
             hi
-          </span>
+          </span> */}
         </div>
-        <div className=" border-b-4 border-red-200 mb-5 mt-5">
+        {/* <div className=" border-b-4 border-red-200 mb-5 mt-5">
           <h1 className="pt-5 font-extrabold">Ecommarce</h1>
-        </div>
+        </div> */}
 
         <Link
           to="/about"
