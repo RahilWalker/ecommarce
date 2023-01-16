@@ -21,25 +21,29 @@ export const newData = [
 
 export const showCase = [
   {
-    data: "men",
+    data: "shirt",
+    id: 1,
     image:
       "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Vertical/14a.webp",
     link: "",
   },
   {
-    data: "accessories",
+    data: "shirt",
+    id: 2,
     image:
       "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Vertical/12a.webp",
     link: "",
   },
   {
-    data: "women",
+    data: "shirt",
+    id: 3,
     image:
       "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Vertical/13a.webp",
     link: "",
   },
   {
-    data: "women",
+    data: "shirt",
+    id: 4,
     image:
       "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Vertical/15a.webp",
     link: "",

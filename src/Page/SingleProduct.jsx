@@ -6,8 +6,11 @@ export default function SingleProduct() {
   const [show, setShow] = useState([]);
 
   const filterItems = (id) => {
-    const filterImage = showCase.filter((image) => image.id === id);
-    console.log("image", filterImage);
+    // const mapData = showCase.map((item) => item.id === id);
+    const filteredData = showCase.filter((item) => item.id === id);
+
+    // console.log("image", filteredData, mapData);
+    setShow(filteredData);
   };
 
   const { id } = useParams();
@@ -15,13 +18,17 @@ export default function SingleProduct() {
     <>
       <div className="mt-16 lg:mx-20 mx-2 py-5">
         Sin{id}
-        <div className="grid grid-cols-1 lg:grid-cols-2 ">
-          <div className="lg:px-10">
-            <img
-              src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Vertical/14a.webp"
-              alt="Gallery image 1"
-              className="h-[80vh] w-full"
-            />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 ">
+          <div className="lg:px-10 md:px-5">
+            {show.map((newData, id) => (
+              <div key={id}>
+                <img
+                  src={newData.image}
+                  alt="Gallery image 1"
+                  className="lg:h-[80vh] w-full"
+                />
+              </div>
+            ))}
             <div className="flex">
               {showCase.map((item, id) => (
                 <div
