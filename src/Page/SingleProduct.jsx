@@ -16,7 +16,7 @@ export default function SingleProduct() {
       <div className="mt-16 lg:mx-20 mx-2 py-5">
         Sin{id}
         <div className="grid grid-cols-1 lg:grid-cols-2 ">
-          <div className="px-10">
+          <div className="lg:px-10">
             <img
               src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Vertical/14a.webp"
               alt="Gallery image 1"
