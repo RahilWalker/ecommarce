@@ -9,7 +9,7 @@ export default function SingleProduct() {
     // const mapData = showCase.map((item) => item.id === id);
     const filteredData = showCase.filter((item) => item.id === id);
 
-    // console.log("image", filteredData, mapData);
+    // console.log("image", filteredData,mapData);
     setShow(filteredData);
   };
 

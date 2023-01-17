@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { addCart, leftIcon, rightIcon } from "../Icons/MaterialIcons";
 import { deals } from "../Storage/HotItems";
+import "../App.css";
 
 export default function Male() {
   const [filterCategory, setFilterCategory] = useState([]);
@@ -61,7 +62,7 @@ export default function Male() {
         </div>
         <div
           id="male"
-          className="w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide"
+          className="w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth invisible-scrollbar"
         >
           {/* {console.log("dddd", deals)} */}
           {filterCategory.map((item, id) => (

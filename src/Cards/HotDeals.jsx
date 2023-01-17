@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { addCart, leftIcon, rightIcon } from "../Icons/MaterialIcons";
 import { deals } from "../Storage/HotItems";
+import "../App.css";
 
 export default function HotDeals() {
   const slideLeft = () => {
@@ -36,7 +37,7 @@ export default function HotDeals() {
       </div>
       <div
         id="slider"
-        className="w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide"
+        className="w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth invisible-scrollbar"
       >
         {deals.map((item, id) => (
           <div

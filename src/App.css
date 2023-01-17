@@ -1,8 +1,6 @@
-/* 
-.test{
-    visibility: hidden;
-    display: flex;
-    position: absolute;
-    left: 2rem;
-    margin-top: -4rem;
-} */
+.invisible-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+.invisible-scrollbar{
+    scrollbar-width: none;
+  }
