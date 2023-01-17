@@ -10,10 +10,10 @@ export default function Home() {
     <>
       <Carousel />
       <div className="lg:mx-20 mx-2 py-5 w-[100wv] ">
-        <HotDeals />
+        {/* <HotDeals /> */}
         <NewArrival />
-        <Women />
-        <Male />
+        {/* <Women /> */}
+        {/* <Male /> */}
       </div>
     </>
   );

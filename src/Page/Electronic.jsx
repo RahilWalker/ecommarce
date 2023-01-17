@@ -9,6 +9,7 @@ export default function Electronic() {
     // console.log("new", filteredData);
     setShow(filteredData);
   };
+
   return (
     <>
       <div className="mt-16 lg:mx-20 mx-2 py-5">
