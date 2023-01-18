@@ -1,4 +1,5 @@
 import React from "react";
+import Electronic from "./Cards/Electronic";
 import HotDeals from "./Cards/HotDeals";
 import Male from "./Cards/Male";
 import NewArrival from "./Cards/NewArrival";
@@ -10,10 +11,11 @@ export default function Home() {
     <>
       <Carousel />
       <div className="lg:mx-20 mx-2 py-5 w-[100wv] ">
-        {/* <HotDeals /> */}
+        <HotDeals />
         <NewArrival />
-        {/* <Women /> */}
-        {/* <Male /> */}
+        <Women />
+        <Male />
+        <Electronic />
       </div>
     </>
   );
