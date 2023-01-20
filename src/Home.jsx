@@ -13,8 +13,8 @@ export default function Home() {
       <div className="lg:mx-20 mx-2 py-5 w-[100wv] ">
         <HotDeals />
         <NewArrival />
-        <Women />
-        <Male />
+        {/* <Women />
+        <Male /> */}
         <Electronic />
       </div>
     </>
