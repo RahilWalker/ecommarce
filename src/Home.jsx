@@ -1,9 +1,7 @@
 import React from "react";
 import Electronic from "./Cards/Electronic";
-import HotDeals from "./Cards/HotDeals";
-import Male from "./Cards/Male";
+import MultiCard from "./Cards/MultiCard";
 import NewArrival from "./Cards/NewArrival";
-import Women from "./Cards/Women";
 import Carousel from "./Components/Carousel/Carousel";
 
 export default function Home() {
@@ -11,10 +9,7 @@ export default function Home() {
     <>
       <Carousel />
       <div className="lg:mx-20 mx-2 py-5 w-[100wv] ">
-        <HotDeals />
         <NewArrival />
-        {/* <Women />
-        <Male /> */}
         <Electronic />
       </div>
     </>

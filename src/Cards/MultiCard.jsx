@@ -1,10 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
-import { addCart, leftIcon, rightIcon } from "../Icons/MaterialIcons";
+import { leftIcon, rightIcon } from "../Icons/MaterialIcons";
 import { deals } from "../Storage/HotItems";
-import "../App.css";
+import { Link } from "react-router-dom";
 
-export default function Male() {
+function MultiCard() {
   const [filterCategory, setFilterCategory] = useState([]);
 
   const filterItems = () => {
@@ -30,30 +29,8 @@ export default function Male() {
   };
 
   return (
-    <>
-      <div className="flex justify-between mb-5 lg:mt-10">
-        <div className="text-xl font-extrabold mt-2">MEN</div>
-        <div className="">
-          <div className="lg:flex  hidden  ">
-            <p className="px-1 text-red-400 hover:text-red-700 cursor-pointer text-md">
-              Best Sellers
-            </p>{" "}
-            <span className="opacity-30">|</span>
-            <p className="px-1 text-red-400 hover:text-red-700 cursor-pointer text-md">
-              Best Sellers
-            </p>
-            <span className="opacity-30">|</span>{" "}
-            <p className="px-1 text-red-400 hover:text-red-700 cursor-pointer text-md">
-              Best Sellers
-            </p>{" "}
-            <span className="opacity-30">|</span>
-            <p className="px-1 text-red-400 hover:text-red-700 cursor-pointer text-md">
-              Best Sellers
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className="relative items-center hidden lg:flex">
+    <div>
+      <div className="relative items-center hidden lg:flex mt-5">
         <div
           className="opacity-50 cursor-pointer hover:opacity-100"
           onClick={slideLeft}
@@ -68,12 +45,12 @@ export default function Male() {
           {filterCategory.map((item, id) => (
             <div
               key={id}
-              className=" inline-block whitespace-normal p-2 cursor-pointer  hover:scale-105 ease-in-out duration-300 "
+              className=" inline-block whitespace-normal p-2 cursor-pointer  "
             >
               <Link to={`single/${id}`}>
                 <div className="rounded-lg bg-white shadow-lg text-center relative">
                   <img
-                    className=" w-full lg:h-72  object-cover md:w-64 opacity-80 hover:opacity-100 "
+                    className=" w-full lg:h-72  object-cover md:w-64 opacity-80 hover:opacity-100 hover:scale-105 ease-in-out duration-300  "
                     src="https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.jpg"
                     alt=""
                   />
@@ -106,6 +83,45 @@ export default function Male() {
           {rightIcon}
         </div>
       </div>
-    </>
+
+      {/* <div className="shadow-lg rounded-lg mr-2 border-t-2 border-red-700 my-10">
+      <div className="flex justify-center">
+        <img
+          src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/peripherals/alienware/peripherals/alienware-trimode-720m-wireless-mouse/assets/mouse-aw720m-wh-gallery-1.psd?fmt=pjpg&pscan=auto&scl=1&wid=4277&hei=3022&qlt=100,1&resMode=sharp2&size=4277,3022&chrss=full&imwidth=5000"
+          alt=""
+          className="h-40 "
+        />
+      </div>
+      <div className="flex justify-center py-2 text-sm font-extrabold opacity-40">
+        Discount of The Week
+      </div>
+    </div> */}
+      {/* <div className="shadow-lg rounded-lg mr-2 border-t-2 border-red-700 my-10">
+      <div className="flex justify-center">
+        <img
+          src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/peripherals/alienware/peripherals/alienware-trimode-720m-wireless-mouse/assets/mouse-aw720m-wh-gallery-1.psd?fmt=pjpg&pscan=auto&scl=1&wid=4277&hei=3022&qlt=100,1&resMode=sharp2&size=4277,3022&chrss=full&imwidth=5000"
+          alt=""
+          className="h-40 "
+        />
+      </div>
+      <div className="flex justify-center py-2 text-sm font-extrabold opacity-40">
+        Discount of The Week
+      </div>
+    </div> */}
+      {/* <div className="shadow-lg rounded-lg mr-2 border-t-2 border-red-700 my-10">
+      <div className="flex justify-center">
+        <img
+          src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/peripherals/alienware/peripherals/alienware-trimode-720m-wireless-mouse/assets/mouse-aw720m-wh-gallery-1.psd?fmt=pjpg&pscan=auto&scl=1&wid=4277&hei=3022&qlt=100,1&resMode=sharp2&size=4277,3022&chrss=full&imwidth=5000"
+          alt=""
+          className="h-40 "
+        />
+      </div>
+      <div className="flex justify-center py-2 text-sm font-extrabold opacity-40">
+        Discount of The Week
+      </div>
+    </div> */}
+    </div>
   );
 }
+
+export default MultiCard;

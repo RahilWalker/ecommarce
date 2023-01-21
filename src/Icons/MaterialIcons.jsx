@@ -37,7 +37,7 @@ export const rightIcon = (
     viewBox="0 0 24 24"
     strokeWidth={1.5}
     stroke="currentColor"
-    className="w-6 h-6"
+    className="w-10 h-10"
   >
     <path
       strokeLinecap="round"
@@ -53,7 +53,7 @@ export const leftIcon = (
     viewBox="0 0 24 24"
     strokeWidth={1.5}
     stroke="currentColor"
-    className="w-6 h-6"
+    className="w-10 h-10"
   >
     <path
       strokeLinecap="round"
